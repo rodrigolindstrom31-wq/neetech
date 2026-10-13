@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#123b32"><title>Administración | Repositorio UEP</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body class="admin-body">
+  <header class="site-header admin-header"><a class="brand" href="/"><div class="brand-mark">UEP</div><div><span class="brand-title">Repositorio Académico</span><span class="brand-subtitle">Panel de administración</span></div></a><a class="back-link" href="/">← Volver al sitio</a></header>
+  <main class="admin-main">
+    <section id="login-panel" class="admin-card login-card">
+      <p class="eyebrow dark-eyebrow">ÁREA RESTRINGIDA</p><h1>Bienvenido/a.</h1><p class="muted">Ingresá con las credenciales del administrador para gestionar las publicaciones.</p>
+      <form id="login-form" class="form-stack">
+        <label>Usuario<input name="username" autocomplete="username" required placeholder="Usuario administrador"></label>
+        <label>Contraseña<input name="password" type="password" autocomplete="current-password" required placeholder="Tu contraseña"></label>
+        <button class="button button-dark" type="submit">Iniciar sesión <span>→</span></button><p id="login-message" class="form-message" role="status"></p>
+      </form>
+      <p class="security-note">El acceso se habilita después de configurar el administrador inicial en Cloudflare.</p>
+    </section>
+
+    <section id="dashboard" class="dashboard" hidden>
+      <div class="dashboard-heading"><div><p class="eyebrow dark-eyebrow">GESTIÓN DE CONTENIDO</p><h1>Publicaciones</h1><p class="muted">Cargá investigaciones en PDF y mantené actualizada la colección.</p></div><button id="logout" class="button button-outline" type="button">Cerrar sesión</button></div>
+      <div class="admin-columns">
+        <form id="upload-form" class="admin-card form-stack">
+          <h2>Nueva investigación</h2>
+          <label>Título del trabajo<input name="title" maxlength="220" required placeholder="Título completo del artículo"></label>
+          <label>Autor/es<input name="authors" maxlength="220" required placeholder="Nombre y apellido"></label>
+          <div class="form-row"><label>Área / categoría<input name="category" maxlength="100" required placeholder="Educación, Humanidades…"></label><label>Año de publicación<input name="year" type="number" min="1900" max="2100" required></label></div>
+          <label>Resumen<textarea name="abstract" maxlength="1800" rows="4" required placeholder="Breve descripción de la investigación"></textarea></label>
+          <label>Palabras clave<input name="keywords" maxlength="300" placeholder="educación, sociedad, investigación"></label>
+          <label>Archivo PDF<input name="pdf" type="file" accept="application/pdf,.pdf" required></label>
+          <label class="check-label"><input name="permission" type="checkbox" required> Confirmo que tengo autorización para publicar este documento.</label>
+          <button class="button button-dark" type="submit">Publicar investigación <span>↑</span></button><p id="upload-message" class="form-message" role="status"></p>
+        </form>
+        <section class="admin-card manage-card"><div class="manage-title"><h2>Contenido publicado</h2><button id="refresh" class="text-button" type="button">Actualizar ↻</button></div><div id="admin-articles" class="admin-articles"><p class="muted">Iniciá sesión para ver las publicaciones.</p></div></section>
+      </div>
+    </section>
+  </main>
+  <footer><a class="footer-brand" href="/">UEP <span>Repositorio Académico</span></a><span>Acceso autorizado únicamente</span></footer>
+  <script src="/assets/admin.js" defer></script>
+</body>
+</html>

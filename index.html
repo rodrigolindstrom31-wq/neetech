@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Repositorio académico de investigaciones de la Facultad de Humanidades y Ciencias de la Educación, UEP Campus Gutenberg.">
+  <meta name="theme-color" content="#123b32">
+  <title>Repositorio Académico | UEP Campus Gutenberg</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Inicio del repositorio">
+      <div class="brand-mark">UEP</div>
+      <div><span class="brand-title">Repositorio Académico</span><span class="brand-subtitle">Campus Gutenberg · Ne’etech</span></div>
+    </a>
+    <nav><a href="#coleccion">Investigaciones</a><a href="#acerca">Acerca del repositorio</a><a class="admin-link" href="/admin.html">Administración ↗</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> CONOCIMIENTO · INVESTIGACIÓN · COMUNIDAD</p>
+        <h1>Ideas que generan<br><em>conocimiento.</em></h1>
+        <p class="hero-text">Un espacio para descubrir, consultar y compartir investigaciones académicas de la Facultad de Humanidades y Ciencias de la Educación.</p>
+        <a class="button button-light" href="#coleccion">Explorar investigaciones <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="book book-back"></div><div class="book book-front"><span>UEP</span><small>INVESTIGACIÓN<br>Y EDUCACIÓN</small><b>01</b></div>
+        <div class="spark spark-one">✳</div><div class="spark spark-two">✦</div>
+      </div>
+      <div class="hero-foot"><span>UEP · CAMPUS GUTENBERG</span><span>REPOSITORIO DIGITAL / 01</span></div>
+    </section>
+
+    <section class="search-section" id="coleccion">
+      <div class="section-heading">
+        <div><p class="eyebrow dark-eyebrow">BIBLIOTECA DIGITAL</p><h2>Explorá la colección</h2></div>
+        <p class="muted">Investigaciones organizadas para facilitar<br>el acceso al conocimiento.</p>
+      </div>
+      <div class="search-panel">
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Buscar por título, autor, tema o palabra clave…" autocomplete="off"></label>
+        <select id="category" aria-label="Filtrar por categoría"><option value="">Todas las áreas</option></select>
+      </div>
+      <div class="results-line"><span id="result-count">Cargando investigaciones…</span><span>ORDEN: MÁS RECIENTES</span></div>
+      <div id="articles" class="article-grid" aria-live="polite"><div class="loading-card">Preparando la biblioteca…</div></div>
+      <div id="empty" class="empty-state" hidden><div class="empty-icon">⌕</div><h3>No encontramos resultados</h3><p>Probá con otro término o seleccioná otra área.</p></div>
+    </section>
+
+    <section class="about" id="acerca">
+      <div class="about-symbol">✳</div>
+      <div><p class="eyebrow">NUESTRO PROPÓSITO</p><h2>La investigación<br>merece ser compartida.</h2></div>
+      <p class="about-text">Este repositorio digital reúne artículos y trabajos de investigación académica de la UEP, Campus Gutenberg. Su objetivo es promover la consulta, la difusión responsable y la preservación del conocimiento producido en la comunidad universitaria.</p>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="/">UEP <span>Repositorio Académico</span></a><span>Facultad de Humanidades y Ciencias de la Educación</span><span>© <span id="year"></span> · Proyecto académico Ne’etech</span></footer>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+name = "repositorio-uep-gutenberg"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "repositorio-uep"
+database_id = "REEMPLAZAR_CON_ID_DE_D1"
+
+[[r2_buckets]]
+binding = "PDFS"
+bucket_name = "repositorio-uep-pdfs"
+
+# SESSION_SECRET se configura como secreto desde Cloudflare Pages:
+# npx wrangler pages secret put SESSION_SECRET --project-name repositorio-uep-gutenberg
